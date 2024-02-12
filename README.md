@@ -13,8 +13,8 @@ To use this script effectively:
 5. Identify the Phone Number or Contact Name of interest (e.g., `ls *Tom*Text*.html`).
 6. Create a new directory for sorting.
 7. Copy (do not move) the relevant files to the new directory (e.g., `cp *Tom*Text*.html NewFolder`).
-8. Move this script into the new folder.
-9. Execute the script. It will find every HTML file, compile the data in chronological order, and save it to `compiled_texts_{timestamp}.txt`.
+8. The script can be executed from another location. To process the files in your new directory, navigate to that directory in the terminal so that it is your current working directory. Then, run the script by specifying its path. For example, if your script is in the parent directory, you would use `../google-voice-texts-converter.sh`.
+9. Execute the script. It will find every HTML file in the current working directory, compile the data in chronological order, and save it to `compiled_texts_{timestamp}.txt`.
 10. You can then safely move the `compiled-texts.txt` file to a different location and delete the new folder and its contents.
 
 ## Dependencies
