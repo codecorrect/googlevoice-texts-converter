@@ -14,7 +14,7 @@ To use this script effectively:
 6. Create a new directory for sorting.
 7. Copy (do not move) the relevant files to the new directory (e.g., `cp *Tom*Text*.html NewFolder`).
 8. Move this script into the new folder.
-9. Execute the script. It will find every HTML file, compile the data in chronological order, and save it to `compiled-texts.txt`.
+9. Execute the script. It will find every HTML file, compile the data in chronological order, and save it to `compiled_texts_{timestamp}.txt`.
 10. You can then safely move the `compiled-texts.txt` file to a different location and delete the new folder and its contents.
 
 ## Dependencies
