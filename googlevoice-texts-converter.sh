@@ -1,10 +1,11 @@
 #!/bin/bash
 
 # ------------------------------------------------------------------------------------------------------------
-# Script Name: google-voice-text-converter.sh 
+# Script Name: googlevoice-texts-converter.sh
 # Author: Code Correct
 # Date Created: 2024-02-11
 # Last Modified: 2024-02-12
+# Source: https://github.com/codecorrect/googlevoice-texts-converter
 #
 # Description: 
 # 	Google Voice exports its texts messages in an HTML format, one HTML file per day of messages. 
