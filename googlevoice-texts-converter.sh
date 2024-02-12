@@ -109,12 +109,12 @@ echo -e "\n Processing HTML files: \n"
 #loops through every HTML file in curr dir
 for file in *.html; do
 	echo "Processing File: $file..."	
-	if [ -e "$file" ]; then
+	if [ -e "$file" ]; then							#errorhandling if no html files
 		grep -E 'class="message"|class="sender vcard"|<q>' "$file" | 	#finds lines with text message data 
 		sed 's/<[^>]*>//g' | 						#strips HTML tags
-		sed "s/&#39;/'/g" | 		#converts apostrophe char ref
+		sed "s/&#39;/'/g" | 						#converts apostrophe char ref
 		sed 's/&#8239;/ /g' | 						#converts html whitespace ref to a space
-		sed "s/&amp;/\&/g" |		#converts apersand char ref
+		sed "s/&amp;/\&/g" |						#converts apersand char ref
 		awk '{								#combines every 3 lines into 1
 			if (NR % 3 == 1) {
 				line = $0;
@@ -124,7 +124,7 @@ for file in *.html; do
 				print line " " $0;
 			}
 		}' |  
-		sed 's/^[ \t]*//' | 		#strips leading whitespace
+		sed 's/^[ \t]*//' | 						#strips leading whitespace
 		convert_date | 
 		convert_time >> gv_texts_compiled_$(date +"%Y-%m-%d").txt
 	else
